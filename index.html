@@ -2,11 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>MongoDB</title>
+
+    <!-- script for enabling other libs of js -->
+    <script>
+        window.nodeRequire = require;
+//        delete window.require;
+//        delete window.exports;
+        delete window.module;
+    </script>
+
 </head>
 <body>
+    <input id="testInput" type="text">
+    <button id="writeDocIntoDB">write into mongo</button>
 
-    <script src="mongoDbTest.js"></script>
-    <!--<script src="mySqlDbTest.js"></script>-->
+    <script type="text/javascript" src="js_libs/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="mongoDbTest.js"></script>
+    <script>
+
+    </script>
 </body>
 </html>

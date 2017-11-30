@@ -1,8 +1,15 @@
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/testongo";
+window.inputVar = 0;
+
+$("#testInput").keyup(function () {
+    inputVar = $(this).val();
+    // console.log("input is " + inputVar);
+});
+// var inputVar = "sjst-dfgdhf";
 
 var myobj = {
-    _id: 48,
+    _id: inputVar,
     name: "Иосиф Борода",
     array1: [
         "Programming",
@@ -16,19 +23,23 @@ var myobj = {
     }]
 };
 
-MongoClient.connect(url, function(err, db) {
-    if (err) throw err;
+$("#writeDocIntoDB").click(function () {
+    // window.id = $("#testInput").val();
 
-    db.collection("teachers").insertOne(myobj, function(err, res) {
+    MongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        console.log("Operation complete");
+
+        db.collection("teachers").insertOne(myobj, function(err, res) {
+            if (err) throw err;
+            // console.log("Operation complete");
+        });
+
+        // db.collection("teachers").updateOne(
+        //     { _id: 48 },
+        //     { objects1: {obj7: "info 7"} }
+        // );
+
+        db.close();
     });
 
-    // db.collection("teachers").updateOne(
-    //     { _id: 48 },
-    //     { objects1: {obj7: "info 7"} }
-    // );
-
-    db.close();
 });
-
