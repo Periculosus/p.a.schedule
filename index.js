@@ -20,7 +20,10 @@ $("#testInput").keyup(function () {
     };
 });
 
+
 $("#writeDocIntoDB").click(function () {
+
+    sweetAlert("Saved", "to database", "success");
 
     MongoClient.connect(url, function(err, db) {
         if (err) throw alert(err);
