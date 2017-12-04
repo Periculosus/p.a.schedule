@@ -1,3 +1,7 @@
 body {
-    background-color: cyan;
+    background-color: darkslategrey;
+}
+h1 {
+    color: whitesmoke;
+    text-align: center;
 }

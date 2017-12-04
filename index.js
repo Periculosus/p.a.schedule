@@ -1,4 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
+const util = require('util');
 var url = "mongodb://localhost:27017/testongo";
 
 $("#testInput").keyup(function () {
@@ -20,7 +21,6 @@ $("#testInput").keyup(function () {
     };
 });
 
-
 $("#writeDocIntoDB").click(function () {
 
     sweetAlert("Saved", "to database", "success");
@@ -40,5 +40,22 @@ $("#writeDocIntoDB").click(function () {
 
         db.close();
     });
+
+});
+
+$("#readFromDB").click(function () {
+
+    MongoClient.connect(url, function (err, db) {
+        if (err) throw alert(err);
+
+        var query = { name: "kolya" };
+
+        db.collection("teachers").find(query).toArray(function (err, dataArray) {
+            if (err) throw alert(err);
+            $("#testOutput").append(util.inspect(dataArray, { showHidden: false, depth: null }));
+        });
+
+        db.close();
+    })
 
 });
