@@ -16,10 +16,15 @@
 //        delete window.exports;
         delete window.module;
     </script>
-
+    <script type="text/javascript" src="js_libs/mustache.min.js"></script>
 </head>
 <body>
-    <h1>Simple MongoDB operations</h1>
+    <div id="renderTemplate"></div>
+
+    <script type="text/html" id="sTemplate">
+        <h1>{{welcome}}</h1>
+    </script>
+
     <input id="testInput" type="text">
     <br>
     <button id="writeDocIntoDB">write into mongo</button>
