@@ -5,7 +5,8 @@ var url = "mongodb://localhost:27017/testongo";
 var simpleTemplate = {
     welcome: "Simple MongoDB operations"
 };
-$("#renderTemplate").append(Mustache.render($("#sTemplate").html(), simpleTemplate));
+//mustache template example
+// $("#renderTemplate").append(Mustache.render($("#sTemplate").html(), simpleTemplate));
 
 $("#testInput").keyup(function () {
     window.myobj = {
@@ -29,7 +30,7 @@ $("#testInput").keyup(function () {
 
 $("#writeDocIntoDB").click(function () {
 
-    // sweetAlert("Saved", "to database", "success");
+        // sweetAlert("Saved", "to database", "success");
 
     MongoClient.connect(url, function(err, db) {
         if (err) throw alert(err);
@@ -39,10 +40,10 @@ $("#writeDocIntoDB").click(function () {
             // console.log("Operation complete");
         });
 
-        // db.collection("teachers").updateOne(
-        //     { _id: 48 },
-        //     { objects1: {obj7: "info 7"} }
-        // );
+            // db.collection("teachers").updateOne(
+            //     { _id: 48 },
+            //     { objects1: {obj7: "info 7"} }
+            // );
 
         db.close();
     });
@@ -60,8 +61,8 @@ $("#readFromDB").click(function () {
             if (err) throw alert(err);
 
             //nodejs util lib method
-            // var arrayObj = util.inspect(dataArray, { showHidden: false, colors: false, depth: null });
-            // $("#testOutput").append(arrayObj);
+                // var arrayObj = util.inspect(dataArray, { showHidden: false, colors: false, depth: null });
+                // $("#testOutput").append(arrayObj);
 
             $("#testOutput").append("\n" + dataArray[0].about);
         });

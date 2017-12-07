@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="scotchApp">
 <head>
     <meta charset="UTF-8">
     <title>MongoDB</title>
 
-    <link rel="stylesheet" href="js_libs/tipsy/tipsy.css">
-    <link rel="stylesheet" href="js_libs/sweetalert/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="js_libs/tipsy/tipsy.css">
+    <link rel="stylesheet" type="text/css" href="js_libs/sweetalert/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
 
-    <link rel="stylesheet" href="index.css">
-
-    <!-- script for enabling other libs of js -->
+    <!-- script for enabling other js libs -->
     <script>
         window.nodeRequire = require;
 //        delete window.require;
 //        delete window.exports;
         delete window.module;
     </script>
-    <script type="text/javascript" src="js_libs/mustache.min.js"></script>
 </head>
-<body>
+<body ng-controller="mainController">
     <div id="renderTemplate"></div>
 
-    <script type="text/html" id="sTemplate">
-        <h1>{{welcome}}</h1>
-    </script>
+    <!--<h1>{{welcome}}</h1>-->
+    <!-- mustache.js <script type="text/html" id="sTemplate"><h1>{{welcome}}</h1></script>-->
 
     <input id="testInput" type="text">
     <br>
@@ -34,13 +31,14 @@
     <br>
     <button id="readFromDB">read collection "teachers"</button>
 
+    <!-- xenoScripts -->
+    <script type="text/javascript" src="js_libs/angular.min.js"></script>
     <script type="text/javascript" src="js_libs/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js_libs/tipsy/jquery.tipsy.js"></script>
     <script type="text/javascript" src="js_libs/sweetalert/sweetalert.min.js"></script>
-
+    <!-- myScripts -->
     <script type="text/javascript" src="index.js"></script>
-    <script>
-//        sweetAlert("hello");
-    </script>
+    <!-- angular templates -->
+    <script type="text/javascript" src="templates/angularMainPage.js"></script>
 </body>
 </html>
