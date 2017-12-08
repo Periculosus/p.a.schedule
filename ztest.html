@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="scotchApp">
+<head>
+    <meta charset="UTF-8">
+    <title>MongoDB</title>
+
+    <!-- angular templates -->
+    <script type="text/javascript" src="templates/fileIncluder.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="js_libs/tipsy/tipsy.css">
+    <link rel="stylesheet" type="text/css" href="js_libs/sweetalert/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="ztest.css">
+
+    <!-- script for enabling other js libs -->
+    <script>
+        window.nodeRequire = require;
+//        delete window.require;
+//        delete window.exports;
+        delete window.module;
+    </script>
+</head>
+<body ng-controller="mainController">
+    <div id="renderTemplate"></div>
+
+    <!--<h1>{{welcome}}</h1>-->
+    <!-- mustache.js <script type="text/html" id="sTemplate"><h1>{{welcome}}</h1></script>-->
+
+    <input id="testInput" type="text">
+    <br>
+    <button id="writeDocIntoDB">write into mongo</button>
+    <br>
+    <br>
+    <textarea cols="30" rows="10" id="testOutput"></textarea>
+    <br>
+    <button id="readFromDB">read collection "teachers"</button>
+
+    <select>
+        <option>Apples</option>
+        <option selected>Pineapples</option>
+        <option>Chocklate</option>
+        <option>Pancakes</option>
+    </select>
+
+
+    <!-- xenoScripts -->
+    <script type="text/javascript" src="js_libs/angular.min.js"></script>
+    <script type="text/javascript" src="js_libs/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js_libs/tipsy/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="js_libs/sweetalert/sweetalert.min.js"></script>
+    <!-- myScripts -->
+    <script type="text/javascript" src="ztest.js"></script>
+</body>
+</html>
