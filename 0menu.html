@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script>
+        window.nodeRequire = require;
+        delete window.module;
+    </script>
+    <css>
+        <link rel="stylesheet" type="text/css" href="js_libs/tipsy/tipsy.css">
+        <link rel="stylesheet" type="text/css" href="js_libs/sweetalert/sweetalert.css">
+    </css>
+    <script type="text/javascript" src="js_libs/angular.min.js"></script>
+
+    <title>Расписание (v.alpha)</title>
+</head>
+<body ng-app="">
+    <h1>test3</h1>
+    <button>believe</button>
+
+    <div ng-include="'zTestTemp.htm'"></div>
+
+    <js ng-include="'templates/jsLibsTemplate.html'"></js>
+
+    <script>
+//        alert("test");
+        $("button").click(function () {
+            sweetAlert("seems its works fine");
+        });
+    </script>
+</body>
+</html>
