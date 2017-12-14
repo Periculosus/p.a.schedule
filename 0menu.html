@@ -8,26 +8,49 @@
         delete window.module;
     </script>
     <css>
-        <link rel="stylesheet" type="text/css" href="js_libs/tipsy/tipsy.css">
-        <link rel="stylesheet" type="text/css" href="js_libs/sweetalert/sweetalert.css">
+
+        <!-- xenoStyles -->
+        <link rel="stylesheet" type="text/css" href="css_libs/tipsy.css">
+        <link rel="stylesheet" type="text/css" href="css_libs/sweetalert.css">
+        <link rel="stylesheet" type="text/css" href="css_libs/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css_libs/fontawesome/css/fontawesome-all.min.css">
+        <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="css/0menu.css">
     </css>
-    <script type="text/javascript" src="js_libs/angular.min.js"></script>
 
     <title>Расписание (v.alpha)</title>
 </head>
-<body ng-app="">
+<body>
     <h1>test3</h1>
-    <button>believe</button>
 
-    <div ng-include="'zTestTemp.htm'"></div>
+    <div class="block500">
+        <div class="list-group">
+            <a class="list-group-item" href="#"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Home</a>
+            <a class="list-group-item" href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; Library</a>
+            <a class="list-group-item" href="#"><i class="fa fa-pencil-alt" aria-hidden="true"></i>&nbsp; Applications</a>
+            <a class="list-group-item" href="#"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Settings</a>
+        </div>
+    </div>
 
-    <js ng-include="'templates/jsLibsTemplate.html'"></js>
+    <select id="selectMenu">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
 
-    <script>
-//        alert("test");
-        $("button").click(function () {
-            sweetAlert("seems its works fine");
-        });
-    </script>
+
+    </select>
+
+    <button id="test">clickme</button>
+
+    <js>
+        <!-- xenoScripts -->
+        <script type="text/javascript" src="js_libs/angular.min.js"></script>
+        <script type="text/javascript" src="js_libs/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js_libs/jquery.tipsy.js"></script>
+        <script type="text/javascript" src="js_libs/sweetalert.min.js"></script>
+        <!-- scripts -->
+        <script type="text/javascript" src="js/0menu.js"></script>
+    </js>
 </body>
 </html>
