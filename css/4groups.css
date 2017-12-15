@@ -1,0 +1,12 @@
+td, th {
+    border: solid 1px gray;
+}
+td {
+    color: green;
+}
+th {
+    color: orangered;
+}
+table {
+
+}

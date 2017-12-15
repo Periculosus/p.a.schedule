@@ -8,7 +8,6 @@
         delete window.module;
     </script>
     <css>
-
         <!-- xenoStyles -->
         <link rel="stylesheet" type="text/css" href="css_libs/tipsy.css">
         <link rel="stylesheet" type="text/css" href="css_libs/sweetalert.css">
@@ -21,27 +20,25 @@
     <title>Расписание (v.alpha)</title>
 </head>
 <body>
-    <h1>test3</h1>
 
-    <div class="block500">
-        <div class="list-group">
-            <a class="list-group-item" href="#"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Home</a>
-            <a class="list-group-item" href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; Library</a>
-            <a class="list-group-item" href="#"><i class="fa fa-pencil-alt" aria-hidden="true"></i>&nbsp; Applications</a>
-            <a class="list-group-item" href="#"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Settings</a>
-        </div>
+    <div class="list-group">
+        <a class="list-group-item" id="scheduleWindow" href="#"><i class="fa fa-clock fa-2x" aria-hidden="true"></i>&nbsp; Составить расписание</a>
+        <a class="list-group-item" id="historyWindow" href="#"><i class="fa fa-book fa-2x" aria-hidden="true"></i>&nbsp; История</a>
+        <a class="list-group-item" id="teachersWindow" href="#"><i class="fa fa-user fa-2x" aria-hidden="true"></i>&nbsp; Преподаватели</a>
+        <a class="list-group-item" id="groupsWindow" href="#"><i class="fa fa-users fa-2x" aria-hidden="true"></i>&nbsp; Группы</a>
+        <a class="list-group-item" id="settingsWindow" href="#"><i class="fa fa-cog fa-spin fa-2x" aria-hidden="true"></i>&nbsp; Настройки</a>
+        <a class="list-group-item" id="aboutWindow" href="#"><i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>&nbsp; О программе</a>
     </div>
 
-    <select id="selectMenu">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+    <!--<select id="selectMenu" title="cars">-->
+        <!--<option value="volvo">Volvo</option>-->
+        <!--<option value="saab">Saab</option>-->
+        <!--<option value="mercedes">Mercedes</option>-->
+        <!--<option value="audi">Audi</option>-->
 
+    <!--</select>-->
 
-    </select>
-
-    <button id="test">clickme</button>
+    <!--<button id="test">clickme</button>-->
 
     <js>
         <!-- xenoScripts -->
@@ -49,6 +46,7 @@
         <script type="text/javascript" src="js_libs/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js_libs/jquery.tipsy.js"></script>
         <script type="text/javascript" src="js_libs/sweetalert.min.js"></script>
+        <script type="text/javascript" src="js_libs/bootstrap/js/bootstrap.min.js"></script>
         <!-- scripts -->
         <script type="text/javascript" src="js/0menu.js"></script>
     </js>
